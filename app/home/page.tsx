@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { useData } from "../DataContext";
-import jwtDecodeUser from "../JwtDecodeUser";
+import jwtDecodeUser from "../DecodingJWT";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import useSocket from "../useSocket";
