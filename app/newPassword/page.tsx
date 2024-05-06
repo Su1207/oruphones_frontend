@@ -2,7 +2,7 @@
 
 import axios from "axios";
 import React, { useState } from "react";
-import { useData } from "../useData";
+import { useData } from "../DataContext";
 import { useRouter } from "next/navigation";
 
 const page = () => {
@@ -15,7 +15,7 @@ const page = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:4000/user/emailVerify",
+        "https://oruphones-server.onrender.com/user/emailVerify",
         { email },
         { withCredentials: true }
       );

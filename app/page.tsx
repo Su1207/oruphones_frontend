@@ -3,7 +3,7 @@
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { useData } from "./useData";
+import { useData } from "./DataContext";
 import { toast } from "react-toastify";
 
 export default function Home() {
@@ -18,10 +18,13 @@ export default function Home() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     try {
       e.preventDefault();
-      const response = await axios.post("http://localhost:4000/user/sigin", {
-        email,
-        password,
-      });
+      const response = await axios.post(
+        "https://oruphones-server.onrender.com/user/sigin",
+        {
+          email,
+          password,
+        }
+      );
 
       if (response.status === 200 && response.data) {
         setData(response.data);
@@ -35,11 +38,14 @@ export default function Home() {
   const handleRegister = async (e: React.FormEvent<HTMLFormElement>) => {
     try {
       e.preventDefault();
-      const response = await axios.post("http://localhost:4000/user/register", {
-        username,
-        email,
-        password,
-      });
+      const response = await axios.post(
+        "https://oruphones-server.onrender.com/user/register",
+        {
+          username,
+          email,
+          password,
+        }
+      );
 
       if (response.status === 200 && response.data) {
         toast.success("Registered Successfully. Login now!!");

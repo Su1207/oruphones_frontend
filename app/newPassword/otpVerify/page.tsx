@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import { useData } from "../../useData";
+import { useData } from "../../DataContext";
 import axios from "axios";
 import { toast } from "react-toastify";
 
@@ -42,7 +42,7 @@ const page = () => {
     try {
       if (data?.email && data?.qrcode) {
         const response = await axios.post(
-          "http://localhost:4000/user/otpVerify",
+          "https://oruphones-server.onrender.com/user/otpVerify",
           {
             otp,
             email: data?.email,

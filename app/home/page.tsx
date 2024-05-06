@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { useData } from "../useData";
-import jwtDecodeUser from "../jwtDecodeUser";
+import { useData } from "../DataContext";
+import jwtDecodeUser from "../JwtDecodeUser";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import useSocket from "../useSocket";
@@ -78,7 +78,7 @@ const page = () => {
   const handleLogout = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:4000/user/logout",
+        "https://oruphones-server.onrender.com/user/logout",
         {
           userId: userData?._id,
         },
@@ -100,7 +100,7 @@ const page = () => {
       try {
         setLoading(true);
         const response = await axios.get(
-          `http://localhost:4000/user/activities/${userData?._id}`,
+          `https://oruphones-server.onrender.com/user/activities/${userData?._id}`,
           { withCredentials: true }
         );
 

@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from "react";
 import { io, Socket } from "socket.io-client";
 
-const SOCKET_URL = "http://localhost:4000";
+const SOCKET_URL = "https://oruphones-server.onrender.com";
 
 const useSocket = (): Socket => {
   const socket = useMemo(() => io(SOCKET_URL), []); // Memoize the socket instance
