@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { useData } from "../dataContext";
+import { useData } from "../useData";
 import jwtDecodeUser from "../jwtDecodeUser";
 import axios from "axios";
 import { useRouter } from "next/navigation";

@@ -3,7 +3,7 @@
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { useData } from "./dataContext";
+import { useData } from "./useData";
 import { toast } from "react-toastify";
 
 export default function Home() {

@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import Cookies from "js-cookie";
 import { jwtDecode } from "jwt-decode";
-import { UserProps, useData } from "./dataContext";
+import { UserProps, useData } from "./useData";
 import { useRouter } from "next/navigation";
 
 interface JwtPayload {

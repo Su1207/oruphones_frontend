@@ -2,7 +2,7 @@
 
 import axios from "axios";
 import React, { useState } from "react";
-import { useData } from "../dataContext";
+import { useData } from "../useData";
 import { useRouter } from "next/navigation";
 
 const page = () => {
