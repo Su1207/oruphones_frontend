@@ -37,7 +37,7 @@ const DecodingJWT = () => {
     } else {
       router.replace("/");
     }
-  }, [token]);
+  }, [token, router, setUserData]);
 };
 
 export default DecodingJWT;

@@ -7,7 +7,7 @@ import axios from "axios";
 import useSocket from "../useSocket";
 import { toast } from "react-toastify";
 
-const page = () => {
+const Page = () => {
   const router = useRouter();
   const { data, setUserData } = UseData();
   const [otp, setOtp] = useState("");
@@ -99,4 +99,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

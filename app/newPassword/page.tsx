@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { UseData } from "../DataContext";
 import { useRouter } from "next/navigation";
 
-const page = () => {
+const Page = () => {
   const [email, setEmail] = useState("");
   const { setData } = UseData();
 
@@ -68,4 +68,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

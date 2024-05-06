@@ -24,7 +24,7 @@ interface ActiveSession {
   token: string;
 }
 
-const page = () => {
+const Page = () => {
   const { userData, token } = UseData();
 
   const [userActivities, setUserActivities] = useState<UserActivity[] | null>(
@@ -71,7 +71,7 @@ const page = () => {
       socket.off("connect");
       socket.off("message");
     };
-  }, [socket, token]);
+  }, [socket, token, message]);
 
   jwtDecodeUser();
 
@@ -266,7 +266,7 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
 
 {
   /* Object.entries(userActivities).map(([index, data]) => (
