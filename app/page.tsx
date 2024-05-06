@@ -3,14 +3,14 @@
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { useData } from "./DataContext";
+import { UseData } from "./DataContext";
 import { toast } from "react-toastify";
 
 export default function Home() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
-  const { data, setData } = useData();
+  const { setData } = UseData();
 
   const router = useRouter();
   const [signUp, setSignUp] = useState(false);

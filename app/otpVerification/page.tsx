@@ -2,14 +2,14 @@
 
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import { useData } from "../DataContext";
+import { UseData } from "../DataContext";
 import axios from "axios";
 import useSocket from "../useSocket";
 import { toast } from "react-toastify";
 
 const page = () => {
   const router = useRouter();
-  const { data, setUserData } = useData();
+  const { data, setUserData } = UseData();
   const [otp, setOtp] = useState("");
 
   const socket = useSocket();

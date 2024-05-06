@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import Cookies from "js-cookie";
 import { jwtDecode } from "jwt-decode";
-import { UserProps, useData } from "./DataContext";
+import { UserProps, UseData } from "./DataContext";
 import { useRouter } from "next/navigation";
 
 interface JwtPayload {
@@ -13,12 +13,12 @@ interface JwtPayload {
   // Add other properties if necessary
 }
 
-const jwtDecodeUser = () => {
+const DecodingJWT = () => {
   const token = Cookies.get("token");
 
   const router = useRouter();
 
-  const { setUserData, setToken } = useData();
+  const { setUserData, setToken } = UseData();
 
   useEffect(() => {
     if (token) {
@@ -40,4 +40,4 @@ const jwtDecodeUser = () => {
   }, [token]);
 };
 
-export default jwtDecodeUser;
+export default DecodingJWT;

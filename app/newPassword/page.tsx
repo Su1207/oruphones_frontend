@@ -2,12 +2,12 @@
 
 import axios from "axios";
 import React, { useState } from "react";
-import { useData } from "../DataContext";
+import { UseData } from "../DataContext";
 import { useRouter } from "next/navigation";
 
 const page = () => {
   const [email, setEmail] = useState("");
-  const { setData } = useData();
+  const { setData } = UseData();
 
   const router = useRouter();
 

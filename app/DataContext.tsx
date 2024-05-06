@@ -40,7 +40,7 @@ export const DataProvider: React.FC<{ children: ReactNode }> = ({
   );
 };
 
-export const useData = () => {
+export const UseData = () => {
   const context = useContext(DataContext);
   if (!context) {
     throw new Error("useAuth must be used within an AuthProvider");

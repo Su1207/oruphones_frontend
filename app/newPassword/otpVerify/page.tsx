@@ -2,13 +2,13 @@
 
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import { useData } from "../../DataContext";
+import { UseData } from "../../DataContext";
 import axios from "axios";
 import { toast } from "react-toastify";
 
 const page = () => {
   const router = useRouter();
-  const { data } = useData();
+  const { data } = UseData();
   const [otp, setOtp] = useState("");
   const [newPassword, setNewPassword] = useState("");
 

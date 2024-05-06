@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { useData } from "../DataContext";
+import { UseData } from "../DataContext";
 import jwtDecodeUser from "../DecodingJWT";
 import axios from "axios";
 import { useRouter } from "next/navigation";
@@ -25,7 +25,7 @@ interface ActiveSession {
 }
 
 const page = () => {
-  const { userData, setUserData, setData, token, setToken } = useData();
+  const { userData, token } = UseData();
 
   const [userActivities, setUserActivities] = useState<UserActivity[] | null>(
     null
