@@ -25,7 +25,7 @@ interface ActiveSession {
 }
 
 const Page = () => {
-  const { userData, token } = UseData();
+  const { userData, token, setToken, setUserData, setData } = UseData();
 
   const [userActivities, setUserActivities] = useState<UserActivity[] | null>(
     null
@@ -56,13 +56,13 @@ const Page = () => {
       socket.on("signout user", (data) => {
         if (data === token) {
           Cookies.remove("token");
-          //   setToken("");
-          //   setUserActivities(null);
-          //   setActiveSessions(null);
-          //   setUserData(undefined);
-          //   setData(null);
-          setMessage(!message);
           handleLogout();
+          setToken("");
+          setUserActivities(null);
+          setActiveSessions(null);
+          setUserData(undefined);
+          setData(null);
+          setMessage(!message);
           toast.success("Sign out successfully!!!");
         }
       });

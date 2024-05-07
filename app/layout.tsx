@@ -4,6 +4,7 @@ import "./globals.css";
 import { DataProvider } from "./DataContext";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Protected from "./Protected";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +22,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ToastContainer />
-        <DataProvider>{children}</DataProvider>
+        <Protected>
+          <DataProvider>{children}</DataProvider>
+        </Protected>
       </body>
     </html>
   );

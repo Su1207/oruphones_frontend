@@ -14,20 +14,20 @@ const Page = () => {
 
   const socket = useSocket();
 
-  //   useEffect(() => {
-  //     socket.on("connect", () => {
-  //       console.log("Connected to Socket.IO server", socket.id);
-  //     });
+  useEffect(() => {
+    socket.on("connect", () => {
+      console.log("Connected to Socket.IO server", socket.id);
+    });
 
-  //     socket.on("message", (data) => {
-  //       console.log("Received message:", data);
-  //     });
+    socket.on("message", (data) => {
+      console.log("Received message:", data);
+    });
 
-  //     return () => {
-  //       socket.off("connect");
-  //       socket.off("message");
-  //     };
-  //   }, [socket]);
+    return () => {
+      socket.off("connect");
+      socket.off("message");
+    };
+  }, [socket]);
 
   //   const userAgent = navigator.userAgent;
   //   console.log(userAgent);
